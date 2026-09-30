@@ -56,4 +56,4 @@ O azul petróleo (`#28545A`) é usado em CTAs, links e indicadores de interaçã
 
 ## Demonstração
 
-[nathalyadev.github.io/Arvore-de-links](https://nathalyadev.github.io/Arvore-de-links/)
+[nathalyadev.github.io/arvore-de-links](https://nathalyadev.github.io/arvore-de-links/)
