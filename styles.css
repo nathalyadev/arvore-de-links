@@ -1,72 +1,479 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ==========================================================================
+   Page shell
+   ========================================================================== */
 
-    color: #fff;
-    margin-top: 1em;
+.page {
+  position: relative;
+  width: min(100%, var(--page-max));
+  margin-inline: auto;
+  padding: var(--page-pad-y) var(--page-pad-x) 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.my-informations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 0.35rem;
+  pointer-events: none;
+  z-index: -1;
+  background-color: var(--color-beige);
 }
 
-.my-informations span {
-    font-size: 1.125em;
+.page__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
 }
 
-.my-informations .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+.page__footer {
+  margin-top: 0.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--color-beige);
+  color: var(--color-gray);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
 }
 
-.my-informations .logo img {
-    width: 100%;
-    height: 100%;
+/* ==========================================================================
+   ProfileHeader
+   ========================================================================== */
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.75rem;
+  animation: fade-rise 0.7s ease both;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 210px);
+.profile-header__logo {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;  
 }
 
-main ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 1.875em;
-
+.profile-header__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-main ul a {
-    background-color: var(--background-list);
-    color: var(--color-list);
-    width: 70%;
-    border-radius: 6px;
-
-    padding: 0.875em;
-    font-size: 1.25em;
-    cursor: pointer;
-    font-weight: 500;
+.profile-header__handle {
+  color: var(--color-gray);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
 }
 
-main ul a:hover {
-    background-color: var(--hover-list);
-    color: #fff;
+.profile-header__name {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
-footer {
-    color: #fff;
+.profile-header__role {
+  margin-top: 0.35rem;
+  color: var(--color-teal);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
 
-    position: fixed;
-    bottom: 0;
-    padding: 1em;
-    z-index: 0;
+.profile-header__stack {
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.profile-header__description {
+  max-width: 28rem;
+  color: var(--color-gray);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.profile-header__description::first-letter {
+  font-family: var(--font-serif);
+  font-size: 1.15em;
+  color: var(--color-black);
+}
+
+/* ==========================================================================
+   CTA group · PrimaryButton · LinkButton
+   ========================================================================== */
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  animation: fade-rise 0.7s ease 0.08s both;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: var(--touch-min);
+  padding: 0.95rem 1.35rem;
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--color-teal);
+  transition:
+    background-color var(--ease),
+    border-color var(--ease),
+    transform var(--ease);
+}
+
+.primary-button__arrow {
+  display: inline-block;
+  transition: transform var(--ease);
+}
+
+.primary-button:hover {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.primary-button:hover .primary-button__arrow {
+  transform: translateX(3px);
+}
+
+.primary-button:active {
+  transform: translateY(1px);
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: var(--touch-min);
+  padding: 0.85rem 1.25rem;
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--color-beige);
+  background-color: transparent;
+  transition:
+    border-color var(--ease),
+    color var(--ease),
+    background-color var(--ease);
+}
+
+.link-button__arrow {
+  color: var(--color-teal);
+  transition: transform var(--ease);
+}
+
+.link-button:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+  background-color: var(--color-white);
+}
+
+.link-button:hover .link-button__arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Section label
+   ========================================================================== */
+
+.section-label {
+  margin-bottom: 1.25rem;
+  color: var(--color-gray);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Projects · ProjectItem
+   ========================================================================== */
+
+.projects {
+  animation: fade-rise 0.7s ease 0.16s both;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-beige);
+}
+
+.project-item {
+  border-bottom: 1px solid var(--color-beige);
+}
+
+.project-item__link {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  min-height: var(--touch-min);
+  padding: 1.15rem 0.15rem;
+  transition: background-color var(--ease);
+}
+
+.project-item__index {
+  color: var(--color-teal);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.project-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-item__title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.project-item__tech {
+  color: var(--color-gray);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.project-item__link:hover .project-item__title {
+  color: var(--color-teal);
+}
+
+/* ==========================================================================
+   Services · ServiceItem
+   ========================================================================== */
+
+.services {
+  animation: fade-rise 0.7s ease 0.24s both;
+}
+
+.services__list {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.service-item {
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--color-beige);
+  transition: border-color var(--ease);
+}
+
+.service-item:hover {
+  border-left-color: var(--color-teal);
+}
+
+.service-item__title {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.service-item__description {
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SocialLinks
+   ========================================================================== */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.25rem;
+  animation: fade-rise 0.7s ease 0.3s both;
+}
+
+.social-links__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.5rem;
+  color: var(--color-gray);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--ease);
+}
+
+.social-links__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.social-links__item:hover {
+  color: var(--color-teal);
+}
+
+/* ==========================================================================
+   Motion
+   ========================================================================== */
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .profile-header,
+  .cta-group,
+  .projects,
+  .services,
+  .social-links {
+    animation: none;
+  }
+
+  .primary-button,
+  .link-button,
+  .primary-button__arrow,
+  .link-button__arrow {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   Tablet
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .page {
+    gap: 3rem;
+  }
+
+  .page__main {
+    gap: 3.25rem;
+  }
+
+  .profile-header {
+    gap: 2rem;
+  }
+
+  .profile-header__monogram {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.65rem;
+  }
+
+  .cta-group {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .primary-button,
+  .link-button {
+    flex: 1;
+  }
+
+  .services__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 2rem;
+  }
+
+  .project-item__link {
+    grid-template-columns: 3rem 1fr;
+    padding-block: 1.3rem;
+  }
+}
+
+/* ==========================================================================
+   Desktop — composição editorial
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .page {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.95fr) minmax(0, 1.25fr);
+    grid-template-areas:
+      "profile main"
+      "footer main";
+    column-gap: 3.5rem;
+    row-gap: 0;
+    align-items: start;
+    min-height: 100vh;
+    padding-block: 4.5rem 3.5rem;
+  }
+
+  .profile-header {
+    grid-area: profile;
+    position: sticky;
+    top: 4.5rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--color-beige);
+  }
+
+  .page__main {
+    grid-area: main;
+    gap: 3rem;
+    padding-top: 0.35rem;
+  }
+
+  .page__footer {
+    grid-area: footer;
+    margin-top: 2.5rem;
+    align-self: end;
+    max-width: 14rem;
+  }
+
+  .profile-header__description {
+    max-width: 18rem;
+  }
+
+  .cta-group {
+    max-width: 28rem;
+  }
+
+  .primary-button {
+    flex: 1.15;
+  }
+
+  .link-button {
+    flex: 0.85;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    column-gap: 4.5rem;
+    padding-block: 5.5rem 4rem;
+  }
+
+  .profile-header {
+    top: 5.5rem;
+  }
 }

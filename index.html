@@ -1,47 +1,259 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-
-<head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/src/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nathálya Souza - Links</title>
+    <meta
+      name="description"
+      content="Nathálya Souza — Front-end Developer especializada em React, Next.js e TypeScript. Desenvolvimento de produtos digitais modernos e performáticos."
+    />
+    <meta name="theme-color" content="#F7F3ED" />
+
+    <link rel="icon" type="image/png" href="./src/assets/logo.svg" />
+    <title>Nathálya Souza — Front-end Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="src/css/reset.css" />
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
-    <header>
-        <div class="my-informations">
-            <div class="logo">
-                <img src="./src/assets/logo.png" alt="" />
-            </div>
-            <span>@nathalyadev</span>
-            <span>Desenvolvedora Front-end e UI Design</span>
+  <body>
+    <div class="page">
+      <header class="profile-header">
+        <div class="profile-header__logo" aria-hidden="true">
+          <img src="./src/assets/logo.svg" alt="Nathálya Souza" />
         </div>
-    </header>
 
-    <main>
-        <ul>
-            <a href="https://www.instagram.com/nathalyadev/" target="_blank">
-                <li>Instagram</li>
-            </a>
-            <a href="https://www.behance.net/ns-nathalya" target="_blank">
-                <li>Behance</li>
-            </a>
-            <a href="https://github.com/nathalyadev" target="_blank">
-                <li>Github</li>
-            </a>
-            <a href="https://nathalyadev.github.io/Nathalya/" target="_blank">
-                <li>Portfólio</li>
-            </a>
-        </ul>
-    </main>
+        <div class="profile-header__identity">
+          <p class="profile-header__handle">@nathalyadev</p>
+          <h1 class="profile-header__name">Nathálya Souza</h1>
+          <p class="profile-header__role">Front-end Developer</p>
+          <p class="profile-header__stack">React · Next.js · TypeScript</p>
+        </div>
 
-    <footer>
-        <span>Desenvolvido por Nathálya Souza</span>
-    </footer>
-</body>
+        <p class="profile-header__description">
+          Transformo ideias e layouts em experiências digitais modernas, rápidas
+          e responsivas.
+        </p>
+      </header>
 
+      <main class="page__main">
+        <section class="cta-group" aria-label="Ações principais">
+          <a
+            class="primary-button"
+            href="https://www.instagram.com/nathalyadev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Começar um projeto
+            <span class="primary-button__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a
+            class="link-button"
+            href="https://nathalyadev.github.io/portfolio-nathalyadev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver portfólio
+            <span class="link-button__arrow" aria-hidden="true">→</span>
+          </a>
+        </section>
+
+        <section class="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title" class="section-label">
+            Projetos selecionados
+          </h2>
+
+          <ol class="projects__list">
+            <li class="project-item">
+              <a
+                class="project-item__link"
+                href="https://nathalyadev.github.io/portfolio-nathalyadev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="project-item__index">01</span>
+                <span class="project-item__content">
+                  <span class="project-item__title">E-commerce</span>
+                  <span class="project-item__tech">React · Next.js</span>
+                </span>
+              </a>
+            </li>
+
+            <li class="project-item">
+              <a
+                class="project-item__link"
+                href="https://nathalyadev.github.io/portfolio-nathalyadev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="project-item__index">02</span>
+                <span class="project-item__content">
+                  <span class="project-item__title">Sistema Web</span>
+                  <span class="project-item__tech">React · TypeScript</span>
+                </span>
+              </a>
+            </li>
+
+            <li class="project-item">
+              <a
+                class="project-item__link"
+                href="https://nathalyadev.github.io/portfolio-nathalyadev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="project-item__index">03</span>
+                <span class="project-item__content">
+                  <span class="project-item__title">Landing Page</span>
+                  <span class="project-item__tech"
+                    >Next.js · UI Engineering</span
+                  >
+                </span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="services" aria-labelledby="services-title">
+          <h2 id="services-title" class="section-label">Serviços</h2>
+
+          <ul class="services__list">
+            <li class="service-item">
+              <h3 class="service-item__title">Desenvolvimento Front-end</h3>
+              <p class="service-item__description">
+                React · Next.js · TypeScript
+              </p>
+            </li>
+
+            <li class="service-item">
+              <h3 class="service-item__title">E-commerce</h3>
+              <p class="service-item__description">
+                Interfaces, checkout e experiência de compra.
+              </p>
+            </li>
+
+            <li class="service-item">
+              <h3 class="service-item__title">UI Engineering</h3>
+              <p class="service-item__description">
+                Transformação de layouts em interfaces reais e responsivas.
+              </p>
+            </li>
+
+            <li class="service-item">
+              <h3 class="service-item__title">Performance</h3>
+              <p class="service-item__description">
+                Otimização de carregamento e experiência do usuário.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <nav class="social-links" aria-label="Redes profissionais">
+          <a
+            class="social-links__item"
+            href="https://github.com/nathalyadev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+            class="social-links__icon"
+            width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1281_312)">
+                <mask
+                  id="mask0_1281_312"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
+                >
+                  <path d="M0 0H24V24H0V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_1281_312)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z"
+                    fill="currentColor"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_1281_312">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <span>GitHub</span>
+          </a>
+
+          <a
+            class="social-links__item"
+            href="https://www.behance.net/nathalyadev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="social-links__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.097 11.3226C10.645 11.0966 11.065 10.7426 11.323 10.3226C11.581 9.90261 11.742 9.35461 11.742 8.77361C11.742 8.22561 11.645 7.74161 11.484 7.32261C11.29 6.90261 11.032 6.58061 10.677 6.35461C10.3054 6.10594 9.88955 5.93078 9.452 5.83861C8.92984 5.74636 8.4002 5.70317 7.87 5.70961H2V17.9676H7.968C8.516 17.9676 9.065 17.9356 9.548 17.7416C10.0582 17.6194 10.5403 17.4005 10.968 17.0966C11.388 16.8386 11.71 16.4516 11.935 15.9676C12.161 15.5156 12.29 14.9676 12.29 14.3226C12.29 13.5486 12.097 12.8706 11.742 12.3546C11.355 11.9026 10.806 11.5486 10.097 11.3226ZM4.742 7.83861H7.29C7.516 7.83861 7.742 7.87061 7.968 7.87061C8.194 7.87061 8.419 8.00061 8.548 8.09661C8.74088 8.18771 8.89128 8.34957 8.968 8.54861C9.065 8.74161 9.097 8.96761 9.097 9.29061C9.097 9.77361 8.967 10.1936 8.645 10.4196C8.28318 10.6314 7.87127 10.7426 7.452 10.7416H4.742V7.83861ZM9.452 15.0966C9.355 15.3226 9.226 15.4516 9 15.5806C8.806 15.7096 8.58 15.8066 8.355 15.8066C8.129 15.8386 7.871 15.8386 7.613 15.8386H4.71V12.5156H7.677C8.258 12.5156 8.71 12.6456 9.097 12.9356C9.452 13.1936 9.645 13.6776 9.645 14.2906C9.581 14.6126 9.581 14.8706 9.452 15.0966ZM21.807 12.1936C21.677 11.5486 21.387 10.9996 21.032 10.5156C20.6676 10.0286 20.2063 9.62235 19.677 9.32261C19.0623 9.02975 18.3909 8.87545 17.71 8.87061C17.032 8.87061 16.387 9.00061 15.903 9.22561C15.3518 9.4484 14.8564 9.78982 14.452 10.2256C14.032 10.6456 13.71 11.1286 13.484 11.7096C13.247 12.3045 13.1265 12.9393 13.129 13.5796C13.129 14.2576 13.226 14.9026 13.452 15.4836C13.677 16.0636 14 16.5156 14.355 16.9676C14.775 17.3876 15.225 17.7096 15.806 17.9356C16.4115 18.1769 17.0583 18.2975 17.71 18.2906C18.71 18.2906 19.58 18.0646 20.29 17.6126C21.032 17.1616 21.516 16.3866 21.871 15.2906H19.741C19.645 15.5486 19.419 15.8386 19.097 16.0646C18.774 16.2906 18.323 16.4196 17.839 16.4196C17.161 16.4196 16.613 16.2256 16.259 15.8706C15.903 15.5156 15.677 14.8386 15.677 14.1286H22C22 13.4516 21.969 12.7736 21.807 12.1936ZM15.547 12.6136C15.547 12.3866 15.644 12.1606 15.709 11.9676C15.805 11.7416 15.902 11.5156 16.063 11.3546C16.257 11.1606 16.515 10.9676 16.773 10.8386C17.031 10.7086 17.353 10.7086 17.644 10.7086C18.224 10.7086 18.741 10.9026 18.999 11.1936C19.257 11.5156 19.483 11.9676 19.547 12.6136H15.547ZM20.032 6.54861H15.032V7.77361H20.032V6.54861Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <span>Behance</span>
+          </a>
+
+          <a
+            class="social-links__item"
+            href="https://www.instagram.com/nathalyadev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="social-links__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.465 1.066C8.638 1.012 9.012 1 12 1C14.988 1 15.362 1.013 16.534 1.066C17.706 1.119 18.506 1.306 19.206 1.577C19.939 1.854 20.604 2.287 21.154 2.847C21.714 3.396 22.146 4.06 22.422 4.794C22.694 5.494 22.88 6.294 22.934 7.464C22.988 8.639 23 9.013 23 12C23 14.987 22.987 15.362 22.934 16.535C22.881 17.705 22.694 18.505 22.422 19.205C22.1459 19.939 21.7132 20.6041 21.154 21.154C20.604 21.714 19.939 22.146 19.206 22.422C18.506 22.694 17.706 22.88 16.536 22.934C15.362 22.988 14.988 23 12 23C9.012 23 8.638 22.987 7.465 22.934C6.295 22.881 5.495 22.694 4.795 22.422C4.06096 22.1459 3.39588 21.7132 2.846 21.154C2.28658 20.6045 1.85354 19.9398 1.577 19.206C1.306 18.506 1.12 17.706 1.066 16.536C1.012 15.361 1 14.987 1 12C1 9.013 1.013 8.638 1.066 7.466C1.119 6.294 1.306 5.494 1.577 4.794C1.85384 4.06014 2.28722 3.39539 2.847 2.846C3.3962 2.2867 4.06059 1.85367 4.794 1.577C5.494 1.306 6.295 1.12 7.465 1.066ZM16.444 3.046C15.284 2.993 14.936 2.982 11.999 2.982C9.062 2.982 8.714 2.993 7.554 3.046C6.481 3.095 5.899 3.274 5.511 3.425C4.998 3.625 4.631 3.862 4.246 4.247C3.88073 4.60179 3.59981 5.0341 3.424 5.512C3.273 5.9 3.094 6.482 3.045 7.555C2.992 8.715 2.981 9.063 2.981 12C2.981 14.937 2.992 15.285 3.045 16.445C3.094 17.518 3.273 18.1 3.424 18.488C3.6 18.965 3.881 19.398 4.246 19.753C4.601 20.118 5.034 20.399 5.511 20.575C5.899 20.726 6.481 20.905 7.554 20.954C8.714 21.007 9.061 21.018 11.999 21.018C14.937 21.018 15.284 21.007 16.444 20.954C17.517 20.905 18.099 20.726 18.487 20.575C19 20.375 19.367 20.138 19.752 19.753C20.117 19.398 20.398 18.965 20.574 18.488C20.725 18.1 20.904 17.518 20.953 16.445C21.006 15.285 21.017 14.937 21.017 12C21.017 9.063 21.006 8.715 20.953 7.555C20.904 6.482 20.725 5.9 20.574 5.512C20.374 4.999 20.137 4.632 19.752 4.247C19.3972 3.88173 18.9649 3.60081 18.487 3.425C18.099 3.274 17.517 3.095 16.444 3.046ZM10.594 15.391C11.3787 15.7176 12.2524 15.7617 13.0659 15.5157C13.8795 15.2697 14.5824 14.7489 15.0546 14.0422C15.5268 13.3356 15.7391 12.4869 15.655 11.6411C15.571 10.7953 15.196 10.005 14.594 9.405C14.2102 9.02148 13.7462 8.72781 13.2353 8.54515C12.7245 8.36248 12.1794 8.29536 11.6395 8.34862C11.0996 8.40187 10.5782 8.57418 10.1128 8.85313C9.64745 9.13208 9.24974 9.51074 8.9483 9.96185C8.64686 10.413 8.44919 10.9253 8.36952 11.462C8.28984 11.9986 8.33015 12.5463 8.48754 13.0655C8.64493 13.5847 8.91548 14.0626 9.27972 14.4647C9.64396 14.8668 10.0928 15.1832 10.594 15.391ZM8.002 8.002C8.52702 7.47698 9.15032 7.0605 9.8363 6.77636C10.5223 6.49222 11.2575 6.34597 12 6.34597C12.7425 6.34597 13.4777 6.49222 14.1637 6.77636C14.8497 7.0605 15.473 7.47698 15.998 8.002C16.523 8.52702 16.9395 9.15032 17.2236 9.8363C17.5078 10.5223 17.654 11.2575 17.654 12C17.654 12.7425 17.5078 13.4777 17.2236 14.1637C16.9395 14.8497 16.523 15.473 15.998 15.998C14.9377 17.0583 13.4995 17.654 12 17.654C10.5005 17.654 9.06234 17.0583 8.002 15.998C6.94166 14.9377 6.34597 13.4995 6.34597 12C6.34597 10.5005 6.94166 9.06234 8.002 8.002ZM18.908 7.188C19.0381 7.06527 19.1423 6.91768 19.2143 6.75397C19.2863 6.59027 19.3248 6.41377 19.3274 6.23493C19.33 6.05609 19.2967 5.87855 19.2295 5.71281C19.1622 5.54707 19.0624 5.39651 18.936 5.27004C18.8095 5.14357 18.6589 5.04376 18.4932 4.97652C18.3275 4.90928 18.1499 4.87598 17.9711 4.87858C17.7922 4.88119 17.6157 4.91965 17.452 4.9917C17.2883 5.06374 17.1407 5.1679 17.018 5.298C16.7793 5.55103 16.6486 5.88712 16.6537 6.23493C16.6588 6.58274 16.7992 6.91488 17.0452 7.16084C17.2911 7.40681 17.6233 7.54723 17.9711 7.5523C18.3189 7.55737 18.655 7.42669 18.908 7.188Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            <span>Instagram</span>
+          </a>
+        </nav>
+      </main>
+
+      <footer class="page__footer">
+        <p>Nathálya Souza</p>
+      </footer>
+    </div>
+  </body>
 </html>
